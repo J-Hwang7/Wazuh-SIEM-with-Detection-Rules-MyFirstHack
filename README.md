@@ -94,7 +94,4 @@ Import-Module Invoke-AtomicRedTeam
 mkdir \AtomicRedTeam
 Install-AtomicRedTeam -InstallPath [path to AtomicRedTeam directory]
 ```
-
-
-```
 2. Run A
