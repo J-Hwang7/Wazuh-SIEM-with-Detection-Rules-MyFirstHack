@@ -50,4 +50,5 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
 .\sysmon64.exe -accepteula -i sysmonconfig.xml
 ```
 5. Navigate to https://localhost and click on add agent.
-       1. 
+   * Select "MSI 32/64 bits" as the package to download and install
+   * 
