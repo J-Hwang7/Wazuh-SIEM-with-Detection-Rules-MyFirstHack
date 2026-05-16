@@ -14,5 +14,7 @@ For the project, I deployed Wazuh with Docker, created a target Windows 10 VM wi
 
 **Deploying Wazuh**
 ```
-git clone https://github.com/wazuh/wazuh-docker.git -b v4.7.0 
+git clone https://github.com/wazuh/wazuh-docker.git -b v4.7.0;
+cd wazuh-docker/single-node;
+docker-compose -f generate-indexer-certs.yml run -rm generator
 ```
