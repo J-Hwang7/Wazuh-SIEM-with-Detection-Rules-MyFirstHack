@@ -19,3 +19,10 @@ git clone https://github.com/wazuh/wazuh-docker.git -b v4.7.0;
 cd wazuh-docker/single-node;
 docker-compose -f generate-indexer-certs.yml run -rm generator
 ```
+
+Navigate to the browser and search https://localhost
+**Login credentials for Wazuh**
+- Username: admin
+- Password: SecretPassword
+
+**
