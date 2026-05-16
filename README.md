@@ -32,4 +32,6 @@ Afterwards, navigate to the browser and search https://localhost
      * Set BaseMemory to 4096MB
      * Set Number of CPUs to 2
      * Set Disk Size to 80.0GB
-2. In the VM, navigate to Windows Security. Next, navigate to Virus & threat protection. Afterwards, navigate to virus & threat protection settings and disable Tamper protection.
+2. In the VM, navigate to Windows Security.
+- Next, navigate to Virus & threat protection.
+- Afterwards, navigate to virus & threat protection settings and disable Tamper protection.
