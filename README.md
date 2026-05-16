@@ -104,3 +104,11 @@ Invoke-AtomicTest [MITRE of detection rule]
      * On the Wazuh dashboard, enter Security events
 
 # Detection Rules
+For the project, I created three detection rules that follow the Sysmon EventID 1(ProcessCreate). 
+* Detection Rules Used: [local_rules.xml](local_rules.xml)
+
+**Detection Rule 100001 - Scheduled task creation detected**
+**MITRE:** T1053.005
+**Level 10**
+**Description:** Monitors for suspicious task creation and execution
+
