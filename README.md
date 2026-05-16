@@ -12,8 +12,7 @@ For the project, I deployed Wazuh with Docker, created a target Windows 10 VM wi
 - Windows 10 or 11 iso file
 - VirtualBox or VMware
 
-
-
+\
 **Deploying Wazuh**
 ```
 git clone https://github.com/wazuh/wazuh-docker.git -b v4.7.0;
