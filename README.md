@@ -36,6 +36,7 @@ Afterwards, navigate to the browser and search https://localhost
      * Set BaseMemory to 4096MB
      * Set Number of CPUs to 2
      * Set Disk Size to 80.0GB
+     
 2. In the VM, navigate to Windows Security.
     - Next, navigate to Virus & threat protection.
     - Afterwards, navigate to virus & threat protection settings and disable Tamper protection.
@@ -51,16 +52,16 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
 .\sysmon64.exe -accepteula -i sysmonconfig.xml
 ```
 5. Navigate to https://localhost and click on add agent.
-   * Select "MSI 32/64 bits" as the package to download and install
-   * In an Administrator PowerShell terminal, run the following command to receive the host IP address
-     ```
-     ipconfig
-     ```
-     * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
-   * Enter the host IP address as the server address
-   * Assign "WindowsVictim" as the agent name
-   * Run the prompted commands in the Victim VM's PowerShell
-  
+    * Select "MSI 32/64 bits" as the package to download and install
+    * In an Administrator PowerShell terminal, run the following command to receive the host IP address
+      ```
+      ipconfig
+      ```
+      * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
+    * Enter the host IP address as the server address
+    * Assign "WindowsVictim" as the agent name
+    * Run the prompted commands in the Victim VM's PowerShell
+      
 \
 **Creating Sigma Detection rules**
 
