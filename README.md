@@ -61,4 +61,4 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
    * Run the prompted commands in the Victim VM's PowerShell
   
 \
-**Create Sigma Detection rules**
+**Creating Sigma Detection rules**
