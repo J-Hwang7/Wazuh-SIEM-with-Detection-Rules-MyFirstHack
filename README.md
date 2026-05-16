@@ -74,5 +74,9 @@ sigma convert -t wazuh [detection rule file name].xml
 ```
 3. Place all sigma detection rules into one file
      * In **/var/ossec/etc/rules** directory, create the file **local_rules.xml** 
-         * Copy contents of each detection rule into **local_rules.xml**
-     *
+         * Copy contents of each Sigma detection rule into **local_rules.xml**
+           
+4. Run the following command to restart Wazuh to utilize the rules
+```
+docker-compose restart wazuh.manager
+```
