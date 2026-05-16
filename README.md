@@ -49,5 +49,5 @@ cd \Sysmon
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml" -OutFile "sysmonconfig.xml"
 .\sysmon64.exe -accepteula -i sysmonconfig.xml
 ```
-5. Navigate to https://localhost and use add agent.
-   1. 
+5. Navigate to https://localhost and click on add agent.
+       1. 
