@@ -31,6 +31,7 @@ Afterwards, navigate to the browser and search https://localhost
 
 \
 **Creating Target VM**
+
 1. In VirtualBox or VMware, create a new VM with the Windows iso file.
      * Set BaseMemory to 4096MB
      * Set Number of CPUs to 2
@@ -62,4 +63,11 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
   
 \
 **Creating Sigma Detection rules**
-j
+
+1. Write each MITRE detection rule into an .xml file
+2. Run the following commands to convert each detection rule into Sigma-style
+```
+pip install sigmatools
+//For each detection rule file, run this command
+sigma convert -t wazuh [detection rule file name].xml
+```
