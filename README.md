@@ -26,7 +26,6 @@ Navigate to the browser and search https://localhost
 - Username: admin
 - Password: SecretPassword
 
-
-
+\
 **Creating Target VM**
 
