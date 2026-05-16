@@ -1,10 +1,10 @@
 # Wazuh-SIEM-with-Detection-Rules-MyFirstHack
-This home project creates a Wazuh SIEM: allowing the accumulation and logging of events from attacks on a Windows victim VM, creating custom Sigma detection rules, and utilizing Atomic Red Team to test the SIEM. This project provided a great opportunity to familiarize myself with Sigma-style detection rules, creating a victim VM, and telemetry.
+This home project creates a Wazuh SIEM: allowing the accumulation and logging of events from attacks on a Windows victim VM, creating custom Sigma detection rules, and utilizing Atomic Red Team to test the SIEM. This project provides a great opportunity to familiarize with Sigma-style detection rules, creating a victim VM, and telemetry, and running security tests.
 
 **Author:** @J-Hwang7 **Date** May 2026
 
 # Overview
-For the project, I deployed Wazuh with Docker, created a target Windows 10 VM with Sysmon, installed a Wazuh agent on the VM, wrote three MITRE detection rules, and tested each rule with Atomic Red Team.
+For the project, I deployed Wazuh with Docker, created a target Windows 10 VM with Sysmon, installed a Wazuh agent on the VM, wrote three MITRE detection rules, converted the detection rules into Sigma-signature style, and tested each rule with Atomic Red Team.
 
 # Wazuh SIEM Procedures
 **Prequiste Installations**
@@ -133,8 +133,16 @@ For the project, I created three detection rules that follow the Sysmon EventID 
 
 **Description:** Monitors for attempts to bypass or alter the system's firewall
 
-# Lessons Learned
-
-
+# What I learned
+- Telemetry is not protection but detection
+     * Detection Rules are only able to notify, not prevent.
+     * If detection rules are written incorrectly, it could lead to SIEM logging failure.
+- Conflicts with the GUI and CLI installation can cause failure of the application setup
+     * When setting up the Wazuh agent on the VM, I attempted to install the agent on the CLI when I had already installed the agent on the GUI. This resulted in a service conflict.
+     * Residual files from the GUI installation prevented the CLI from properly downloading 
+- Absence of toggle protection leads to modification of the device
+     * Through the Atomic Red Team security tests, I witnessed core functions being tampered with.
+     * According to Wazuh, the VM received modifications from threats outside of the security test. (Even though I had not used the VM)
+       
 # Licenses
 The content of this repository is to be used for educational purposes. Sysmon config, Atomic Red Team, and sigma have their own licenses (View Respective GitHub repositories).
