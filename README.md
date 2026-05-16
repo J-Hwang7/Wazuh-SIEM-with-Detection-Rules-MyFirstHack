@@ -11,6 +11,7 @@ For the project, I deployed Wazuh with Docker, created a target Windows 10 VM wi
 - Docker Desktop
 - Windows 10 or 11 iso file
 - VirtualBox or VMware
+- Sysmon v15.2
 
 \
 **Deploying Wazuh**
@@ -42,4 +43,11 @@ Afterwards, navigate to the browser and search https://localhost
 Set-MpPreference -DisableRealtimeMonitoring $true -DisableBehaviorMonitoring $true -DisableIOAVProtection $true -DisableScriptScanning $true
 Get-MpPreference | Select-Object DisableRealtimeMonitoring, DisableBehaviorMonitoring
 ```
-4. 
+4. In an Administrator PowerShell terminal, install Sysmon with the SwiftOnSecurity config with these commands
+```
+cd \Sysmon
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml" -OutFile "sysmonconfig.xml"
+.\sysmon64.exe -accepteula -i sysmonconfig.xml
+```
+5. Navigate to https://localhost and use add agent.
+   1. 
