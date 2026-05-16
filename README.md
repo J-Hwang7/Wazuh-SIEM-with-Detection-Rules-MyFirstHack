@@ -71,3 +71,5 @@ pip install sigmatools
 //For each detection rule file, run this command
 sigma convert -t wazuh [detection rule file name].xml
 ```
+3. Place all sigma detection rules into one file
+    - d 
