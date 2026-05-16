@@ -72,7 +72,7 @@ pip install sigmatools
 //For each detection rule file, run this command
 sigma convert -t wazuh [detection rule file name].xml
 ```
-* Output should be similar to [local_rules.xml}(local_rules.xml)
+* Output should be similar to [local_rules.xml](local_rules.xml)
 
 3. Place all sigma detection rules into one file
      * In **/var/ossec/etc/rules** directory, create the file **local_rules.xml** 
