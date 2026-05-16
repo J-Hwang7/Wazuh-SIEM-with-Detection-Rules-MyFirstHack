@@ -21,6 +21,7 @@ docker-compose -f generate-indexer-certs.yml run -rm generator
 ```
 
 Navigate to the browser and search https://localhost
+
 **Login credentials for Wazuh**
 - Username: admin
 - Password: SecretPassword
