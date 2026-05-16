@@ -94,4 +94,13 @@ Import-Module Invoke-AtomicRedTeam
 mkdir \AtomicRedTeam
 Install-AtomicRedTeam -InstallPath [path to AtomicRedTeam directory]
 ```
-2. Run A
+2. Run Atomic Red Team Tests with the following commands
+```
+//For each detection rule
+Invoke-AtomicTest [MITRE of detection rule]
+```
+3. Check the logs of the attacks
+     * Navigate to https://localhost
+     * On the Wazuh dashboard, enter Security events
+
+# Detection Rules
