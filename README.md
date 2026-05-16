@@ -28,7 +28,7 @@ Afterwards, navigate to the browser and search https://localhost
 
 \
 **Creating Target VM**
-1. In VirtualBox or VMWARE, create a new VM with the Windows iso file.
+1. In VirtualBox or VMware, create a new VM with the Windows iso file.
      * Set BaseMemory to 4096MB
      * Set Number of CPUs to 2
      * Set Disk Size to 80.0GB
