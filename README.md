@@ -12,7 +12,7 @@ For the project, I deployed Wazuh with Docker, created a target Windows 10 VM wi
 - Windows 10 or 11 iso file
 - VirtualBox or VMware
 
-\
+
 
 **Deploying Wazuh**
 ```
