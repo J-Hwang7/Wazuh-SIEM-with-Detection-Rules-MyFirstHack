@@ -133,4 +133,8 @@ For the project, I created three detection rules that follow the Sysmon EventID 
 
 **Description:** Monitors for attempts to bypass or alter the system's firewall
 
-#
+# Lessons Learned
+
+
+# Licenses
+The content of this repository is to be used for educational purposes. Sysmon config, Atomic Red Team, and sigma have their own licenses (View Respective GitHub repositories).
