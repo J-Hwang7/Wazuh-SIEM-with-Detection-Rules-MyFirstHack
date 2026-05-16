@@ -132,3 +132,5 @@ For the project, I created three detection rules that follow the Sysmon EventID 
 **Level 11**
 
 **Description:** Monitors for attempts to bypass or alter the system's firewall
+
+#
