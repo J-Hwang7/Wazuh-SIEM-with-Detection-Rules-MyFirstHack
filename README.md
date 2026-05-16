@@ -65,7 +65,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
 \
 **Creating Sigma Detection rules**
 
-1. Write each MITRE detection rule into an .xml file
+1. Write each MITRE detection rule into an .xml file   
 2. Run the following commands to convert each detection rule into Sigma-style 
 ```
 pip install sigmatools
@@ -73,11 +73,9 @@ pip install sigmatools
 sigma convert -t wazuh [detection rule file name].xml
 ```
 * Output should be similar to detection rules in [local_rules.xml](local_rules.xml)
-
 3. Place all sigma detection rules into one file
      * In **/var/ossec/etc/rules** directory, create the file **local_rules.xml** 
-         * Copy contents of each Sigma detection rule into **local_rules.xml**
-           
+         * Copy contents of each Sigma detection rule into **local_rules.xml**        
 4. Run the following command to restart Wazuh to utilize the rules
 ```
 docker-compose restart wazuh.manager
@@ -89,7 +87,14 @@ docker-compose restart wazuh.manager
      * Run the following commands in the VM Administrator PowerShell terminal
 ```
 Set-ExecutionPolicy Bypass -Scope Process -Force
-IEX (IWR ‘https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1’ -UseBasicParsing)
-Install-AtomicRedTeam -GetAtomics
+Install-Module -Name Invoke-AtomicRedTeam -Force
+Import-Module Invoke-AtomicRedTeam
+
+//Download Atomic Red Team Tests
+mkdir \AtomicRedTeam
+Install-AtomicRedTeam -InstallPath [path to AtomicRedTeam directory]
+```
+
+
 ```
 2. Run A
