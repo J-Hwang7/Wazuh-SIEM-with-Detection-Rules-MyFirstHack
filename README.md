@@ -57,3 +57,8 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
      ```
      * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
    * Enter the host IP address as the server address
+   * Assign "WindowsVictim" as the agent name
+   * Run the prompted commands in the Victim VM's PowerShell
+  
+\
+**Create Sigma Detection rules**
