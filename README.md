@@ -20,7 +20,7 @@ cd wazuh-docker/single-node;
 docker-compose -f generate-indexer-certs.yml run -rm generator
 ```
 
-Navigate to the browser and search https://localhost
+Afterwards, navigate to the browser and search https://localhost
 
 **Login credentials for Wazuh**
 - Username: admin
@@ -28,4 +28,8 @@ Navigate to the browser and search https://localhost
 
 \
 **Creating Target VM**
-
+1. In VirtualBox or VMWARE, create a new VM with the Windows iso file.
+     * Set BaseMemory to 4096MB
+     * Set Number of CPUs to 2
+     * Set Disk Size to 80.0GB
+2. s
