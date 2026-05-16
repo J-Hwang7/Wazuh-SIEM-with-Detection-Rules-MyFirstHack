@@ -14,6 +14,8 @@ For the project, I deployed Wazuh with Docker, created a target Windows 10 VM wi
 
 \
 **Deploying Wazuh**
+
+In a Linux terminal, run these commands.
 ```
 git clone https://github.com/wazuh/wazuh-docker.git -b v4.7.0;
 cd wazuh-docker/single-node;
