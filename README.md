@@ -37,4 +37,9 @@ Afterwards, navigate to the browser and search https://localhost
 2. In the VM, navigate to Windows Security.
     - Next, navigate to Virus & threat protection.
     - Afterwards, navigate to virus & threat protection settings and disable Tamper protection.
-3. 
+3. In an Administrator PowerShell terminal on the VM, run these commands to disable Windows Defender. (Allows Atomic Red Team security tests to function)
+```
+Set-MpPreference -DisableRealtimeMonitoring $true -DisableBehaviorMonitoring $true -DisableIOAVProtection $true -DisableScriptScanning $true
+Get-MpPreference | Select-Object DisableRealtimeMonitoring, DisableBehaviorMonitoring
+```
+4. 
