@@ -57,7 +57,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
       ```
       ipconfig
       ```
-      * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
+    * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
     * Enter the host IP address as the server address
     * Assign "WindowsVictim" as the agent name
     * Run the prompted commands in the Victim VM's PowerShell
@@ -73,4 +73,6 @@ pip install sigmatools
 sigma convert -t wazuh [detection rule file name].xml
 ```
 3. Place all sigma detection rules into one file
-    - d 
+     * In **/var/ossec/etc/rules** directory, create the file **local_rules.xml** 
+         * Copy contents of each detection rule into **local_rules.xml**
+     *
