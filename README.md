@@ -62,3 +62,4 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
   
 \
 **Creating Sigma Detection rules**
+j
