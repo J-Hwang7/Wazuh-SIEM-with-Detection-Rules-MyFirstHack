@@ -115,12 +115,20 @@ For the project, I created three detection rules that follow the Sysmon EventID 
 
 **Description:** Monitors for suspicious task creation and execution
 
+/
 **Detection Rule 100002 - Registry Run key modification**
+
 **MITRE:** T1547.001 
+
 **Level 12**
+
 **Description:** Monitors for suspicious modifications to the Windows Registry Run keys. Helps to catch malware.
 
+/
 **Detection Rule 100003 - Firewall Manipulation**
+
 **MITRE:** T1562.004
+
 **Level 11**
+
 **Description:** Monitors for attempts to bypass or alter the system's firewall
