@@ -51,4 +51,9 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-mod
 ```
 5. Navigate to https://localhost and click on add agent.
    * Select "MSI 32/64 bits" as the package to download and install
-   * 
+   * In an Administrator PowerShell terminal, run the following command to receive the host IP address
+     ```
+     ipconfig
+     ```
+     * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
+   * Enter the host IP address as the server address
