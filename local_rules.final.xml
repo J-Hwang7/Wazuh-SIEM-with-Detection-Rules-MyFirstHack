@@ -1,0 +1,61 @@
+﻿<!-- ====================================================== -->
+<!-- Custom detection rules (3 rules, all validated         -->
+<!-- against Sysmon EventID 1 process create telemetry)    -->
+<!-- ====================================================== -->
+
+<group name="custom_rules,sysmon,">
+
+  <!-- ============================================== -->
+  <!-- Rule 100001: Scheduled task creation          -->
+  <!-- MITRE: T1053.005                              -->
+  <!-- Catches schtasks.exe /create — used by        -->
+  <!-- attackers for persistence and lateral movement-->
+  <!-- ============================================== -->
+  <rule id="100001" level="10">
+    <if_sid>61603,61604,61605,61606,61607,61613,92052</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\schtasks\.exe$</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)\s/create\b</field>
+    <description>Custom: Scheduled task creation detected (T1053.005 - possible persistence)</description>
+    <mitre>
+      <id>T1053.005</id>
+    </mitre>
+    <group>persistence,attack,</group>
+  </rule>
+
+  <!-- ============================================== -->
+  <!-- Rule 100002: Registry Run key modification    -->
+  <!-- MITRE: T1547.001                              -->
+  <!-- Catches reg.exe add to Run/RunOnce keys —    -->
+  <!-- one of the oldest and most common persistence -->
+  <!-- techniques (still works in 2026)              -->
+  <!-- ============================================== -->
+  <rule id="100002" level="12">
+    <if_sid>61603,61604,61605,61606,61607,61613,92052</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\reg\.exe$</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)\s+add\s+.*\\(CurrentVersion\\Run|CurrentVersion\\RunOnce|CurrentVersion\\RunOnceEx|CurrentVersion\\Policies\\Explorer\\Run)</field>
+    <description>Custom: Registry Run key persistence detected (T1547.001 - autostart persistence)</description>
+    <mitre>
+      <id>T1547.001</id>
+    </mitre>
+    <group>persistence,attack,</group>
+  </rule>
+
+  <!-- ============================================== -->
+  <!-- Rule 100003: Firewall manipulation            -->
+  <!-- MITRE: T1562.004                              -->
+  <!-- Catches netsh advfirewall add/disable —      -->
+  <!-- attackers commonly punch holes to enable C2  -->
+  <!-- or disable firewall to evade defenses        -->
+  <!-- ============================================== -->
+  <rule id="100003" level="11">
+    <if_sid>61603,61604,61605,61606,61607,61613,92052</if_sid>
+    <field name="win.eventdata.image" type="pcre2">(?i)\\netsh\.exe$</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)\s+advfirewall\s+(firewall\s+add\s+rule|set\s+(all|domain|private|public)profile\s+state\s+off)</field>
+    <description>Custom: Firewall manipulation detected (T1562.004 - defense evasion)</description>
+    <mitre>
+      <id>T1562.004</id>
+    </mitre>
+    <group>defense_evasion,attack,</group>
+  </rule>
+
+</group>
