@@ -51,13 +51,13 @@ cd \Sysmon
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/olafhartong/sysmon-modular/master/sysmonconfig.xml" -OutFile "sysmonconfig.xml"
 .\sysmon64.exe -accepteula -i sysmonconfig.xml
 ```
-5. Navigate to https://localhost and click on add agent.
+5. Navigate to Wazuh and click on add agent.
     * Select "MSI 32/64 bits" as the package to download and install
     * In an Administrator PowerShell terminal, run the following command to receive the host IP address
       ```
       ipconfig
       ```
-    * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
+        * Host IP should be under **Ethernet adapter vEthernet (WSL (Hyper-V firewall)):** and **IPv4 Address**
     * Enter the host IP address as the server address
     * Assign "WindowsVictim" as the agent name
     * Run the prompted commands in the Victim VM's PowerShell
