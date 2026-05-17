@@ -100,7 +100,7 @@ Install-AtomicRedTeam -InstallPath [path to AtomicRedTeam directory]
 Invoke-AtomicTest [MITRE of detection rule]
 ```
 3. Check the logs of the attacks
-     * Navigate to https://localhost
+     * Navigate to Wazuh
      * On the Wazuh dashboard, enter Security events
 
 # Detection Rules
