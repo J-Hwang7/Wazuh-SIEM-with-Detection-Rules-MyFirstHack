@@ -30,6 +30,7 @@ Invoke-AtomicTest [MITRE of detection rule]
 3. Check the logs of the attacks
      * Navigate to Wazuh
      * On the Wazuh dashboard, enter Security events
+
 Example logs: [Screenshots](Screenshots)
 # Detection Rules
 For the project, I created three detection rules that follow the Sysmon EventID 1(ProcessCreate). 
