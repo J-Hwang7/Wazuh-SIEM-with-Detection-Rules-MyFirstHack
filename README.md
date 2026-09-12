@@ -1,5 +1,5 @@
 # Wazuh-SIEM-with-Detection-Rules-MyFirstHack
-This home project creates a Wazuh SIEM: allowing the accumulation and logging of events from attacks on a Windows victim VM, creating custom Sigma detection rules, and utilizing Atomic Red Team to test the SIEM. This project provided a great opportunity to familiarize with Sigma-style detection rules, creating a victim VM, telemetry, and running security tests.
+Within Cybersecurity, Telemetry is one of the fundamental aspects to catch and detect threats to a syste,. This project creates a Wazuh SIEM: allowing the accumulation and logging of events from attacks on a Windows victim VM to test the SIEM. This project provided a great opportunity to familiarize with Sigma-style detection rules, creating a victim VM, telemetry, and running security tests.
 
 **Author:** @J-Hwang7 **Date** May 2026
 
