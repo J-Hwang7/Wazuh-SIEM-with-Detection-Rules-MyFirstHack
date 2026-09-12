@@ -1,5 +1,5 @@
 # Wazuh-SIEM-with-Detection-Rules-MyFirstHack
-Within Cybersecurity, Telemetry is one of the fundamental aspects of catching and detecting threats to a system. This project creates a Wazuh SIEM, allowing the accumulation and logging of events from attacks on a Windows victim VM to test the SIEM. This project provided a great opportunity to familiarize myself with Sigma-style detection rules, creating a victim VM, telemetry, and running security tests.
+Within Cybersecurity, Telemetry is one of the fundamental aspects of catching and detecting threats to a system. This project creates a Wazuh SIEM, allowing the accumulation and logging of events from attacks on a Windows victim VM to test the SIEM. This project provided a great opportunity to familiarize myself with Sigma-style detection rules, creating a victim VM, telemetry, deploying applications with Docker, and running security tests.
 
 **Author:** @J-Hwang7 **Date** May 2026
 
